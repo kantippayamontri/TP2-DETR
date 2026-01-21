@@ -79,6 +79,7 @@ TP2_DETR/
 
 ## Setup
 
+
 ### 1. Create the Conda environment
 
 ```bash
@@ -87,6 +88,14 @@ conda activate tp2
 ```
 
 ### 2. Build Deformable‑DETR ops
+### Prerequisites ✅
+
+Before building, make sure you have:
+
+- CUDA 11.7 installed and the `CUDA_HOME` environment variable set.
+- `gcc/g++` compiler installed.
+- PyTorch 2.0.1 with CUDA support installed.
+- The Conda environment activated (created from `environment.yml`).
 
 ```bash
 # Navigate to the ops directory
@@ -96,11 +105,41 @@ cd TP2-DETR/ActionFormer/models/ops
 bash make.sh
 ```
 
-### Prerequisites ✅
+## Dataset
 
-Before building, make sure you have:
+In this project we use **Thumos14** and **ActivityNet1.3** datasets.
 
-- CUDA 11.7 installed and the `CUDA_HOME` environment variable set.
-- `gcc/g++` compiler installed.
-- PyTorch 2.0.1 with CUDA support installed.
-- The Conda environment activated (created from `environment.yml`).
+### Thumos14
+
+Download the Thumos14 dataset from this [link](https://changgunguniversity-my.sharepoint.com/:f:/g/personal/m1461023_cgu_edu_tw/IgDN6Y1UjsvBQa2hojgDqrWKAX4uvdaYDd92V18cFHxAkcU?e=uVb3Yz).
+
+You will get:
+- `CLIP_feature_8frame.tar`
+- `ViFi-CLIP_feature_8frame.tar`
+
+Move both tar files to the `Thumos14/` folder and extract them:
+
+```bash
+# Move the tar files into Thumos14 and extract them
+mv CLIP_feature_8frame.tar ViFi-CLIP_feature_8frame.tar Thumos14/ && \
+cd Thumos14 && \
+tar -xf CLIP_feature_8frame.tar && \
+tar -xf ViFi-CLIP_feature_8frame.tar && \
+rm CLIP_feature_8frame.tar ViFi-CLIP_feature_8frame.tar
+```
+
+### ActivityNet1.3
+
+Download the ActivityNet1.3 dataset from this [link](https://changgunguniversity-my.sharepoint.com/:f:/g/personal/m1461023_cgu_edu_tw/IgA0_UGnnsagQp6zuA-SpzvLAbU_Ilqn5jA0x2m0JIgJiAA?e=Q49r0g).
+
+You will get:
+- `CLIP_feature.tar`
+
+Move the tar file to the `ActivityNet13/` folder and extract it:
+
+```bash
+# Move the tarball into ActivityNet13 and unpack it
+mv CLIP_feature.tar ActivityNet13/ && \
+tar -xf ActivityNet13/CLIP_feature.tar -C ActivityNet13/ && \
+rm ActivityNet13/CLIP_feature.tar
+```
