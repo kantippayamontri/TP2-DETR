@@ -1,0 +1,97 @@
+.continue
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# PyTorch
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.bin
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.conda
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Deformable DETR Build Artifacts
+TP2-DETR/ActionFormer/models/ops/build/
+TP2-DETR/ActionFormer/models/ops/*.egg-info/
+TP2-DETR/ActionFormer/models/ops/*.so
+TP2-DETR/Deformable-DETR/models/ops/build/
+TP2-DETR/Deformable-DETR/models/ops/*.egg-info/
+TP2-DETR/Deformable-DETR/models/ops/*.so
+GAP/models/ConditionalDetr/ops/build/
+GAP/models/ConditionalDetr/ops/*.egg-info/
+GAP/models/ConditionalDetr/ops/*.so
+
+# Model Checkpoints & Results
+ckpt/
+results/
+logs/
+*.log
+figures/
+best_figures/
+wandb/
+tensorboard/
+
+# Data & Features
+*.npy
+*.npz
+*.h5
+*.hdf5
+data/*/features/
+data/*/videos/
+ActivityNet13/
+Thumos14/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# OS
+Thumbs.db
+.DS_Store
+*.Zone.Identifier
+
+# Compressed files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Misc
+*.bak
+*.orig
